@@ -3,53 +3,34 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>מזל טוב</title>
+  <title>מאבני דרך בחינוך  המיוחד</title>
 <style>
 body {direction: rtl;}
 </style>
   <script>
     (function () {
-  const second = 1000,
-        minute = second * 60,
-        hour = minute * 60,
-        day = hour * 24;
+  const countDownDate = new Date("Mar 23, 2022 15:45:00").getTime();
+  let x = setInterval(
 
-  //I'm adding this section so I don't have to keep updating this pen every year :-)
-  //remove this if you don't need it
-  let today = new Date(),
-      dd = String(today.getDate()).padStart(2, "0"),
-      mm = String(today.getMonth() + 1).padStart(2, "0"),
-      yyyy = today.getFullYear(),
-      nextYear = yyyy + 1,
-      dayMonth = "09/30/",
-      birthday = dayMonth + yyyy;
-  birthday = '03/23/2022T08:30:00'
+        function() {
 
-  today = mm + "/" + dd + "/" + yyyy;
-  if (today > birthday) {
-    birthday = dayMonth + nextYear;
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+
+        document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
   }
-  //end
-
-  const countDown = new Date(birthday).getTime(),
-      x = setInterval(function() {
-
-        const now = new Date().getTime(),
-              distance = countDown - now;
-
-        document.getElementById("days").innerText = Math.floor(distance / (day)),
-          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
-          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
-          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
-
-        //do something later when date is reached
-        if (distance < 0) {
-          document.getElementById("headline").innerText = "It's my birthday!";
-          document.getElementById("countdown").style.display = "none";
-          document.getElementById("content").style.display = "block";
-          clearInterval(x);
-        }
-        //seconds
       }, 0)
   }());
   </script>
@@ -58,22 +39,12 @@ body {direction: rtl;}
 <body>
 <div style="direcion: rtl;">
   <div class="container">
-    <h1 id="headline">הכנס של אמא!</h1>
-    <div id="countdown">
-      <ul>
-        <li><span id="days"></span>ימים</li>
-        <li><span id="hours"></span>שעות</li>
-        <li><span id="minutes"></span>דקות</li>
-        <li><span id="seconds"></span>שניות</li>
-      </ul>
-    </div>
-    <div id="content" class="emoji">
-      <span>🥳</span>
-      <span>🎉</span>
-      <span>🎂</span>
-    </div>
+    <h1 id="headline">האבני דרך בחינוך  המיוחד</h1>
+    <p id="countdown">
+    </p>
   </div>
 </div>
 </body>
 </html>
 
+dc
