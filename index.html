@@ -17,6 +17,13 @@ body {direction: rtl;}
   transform: translate(-50%, -50%);
   font-size: -webkit-xxx-large
 }
+.zoom {
+  position: absolute;
+  top: 70%;
+  left: 26%;
+  transform: translate(-50%, -50%);
+  font-size: -webkit-xxx-large
+}
 
 </style>
   <script>
@@ -41,7 +48,8 @@ body {direction: rtl;}
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("countdown").innerHTML = "EXPIRED";
+    document.getElementById("countdown").innerHTML = "התחלנו, התחבר לזום";
+    document.getElementById("zoomDetails").innerHTML = ".";
   }
       }, 1000)
   }());
@@ -54,6 +62,8 @@ body {direction: rtl;}
     <h1 style=" text-align: center" id="headline">אבני דרך בחינוך  המיוחד</h1>
     <img src="avnei_derech.png" style="width:100%;">
     <p class="centered" id="countdown">
+    <p class="zoom" id="zoomDetails" <a href="http://www.ynet.co.il"> </a> </p>
+    <href >
     </p>
   </div>
 </div>
